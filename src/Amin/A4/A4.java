@@ -51,19 +51,39 @@ public class A4 {
 
         // =========================================== A4 - sort by name ================================
         System.out.println("\n=========================================" +
-                "A4 - sort by name ============================================");
-        class CustomComparator implements Comparator<City> { // custom sort
-            @Override
-            public int compare(City o1, City o2) {
-                return o1.name.compareTo(o2.name);
-            }
+                " A4 - sort by name (Ascending) ============================================");
+
+        Collections.sort(capitals, new SortByNameAsc()); // custom sort by name
+        for (City item : capitals) {
+            System.out.println(item);
         }
 
-        System.out.println("\nBefore sort by name: \n" + capitals);
-        Collections.sort(capitals, new CustomComparator()); // custom sort by name
-        System.out.println("\nAfter sort by name: \n" + capitals);
+        System.out.println("\n=========================================" +
+                " A4 - sort by name (Descending) ============================================");
+
+        Collections.sort(capitals, new SortByNameDesc()); // custom sort by name
+        for (City item : capitals) {
+            System.out.println(item);
+        }
 
 
+        // ===================================== A4 - sort by residents ==============================
+       System.out.println("\n=========================================" +
+                "A4 - sort by residents (Ascending) ============================================");
+
+        Collections.sort(capitals, new SortByResidentsAsc());
+        for (City item : capitals) {
+            System.out.println(item);
+        }
+
+        System.out.println("\n=========================================" +
+                "A4 - sort by residents (Descending) ============================================");
+
+        Collections.sort(capitals, new SortByResidentsDesc());
+        for (City item : capitals) {
+            System.out.println(item);
+        }
 
     }
+
 }
