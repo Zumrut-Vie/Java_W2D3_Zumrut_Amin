@@ -1,5 +1,7 @@
 package Amin.A4;
 
+import java.util.Comparator;
+
 public class City {
     String name;
     int citizensNum;
@@ -12,6 +14,10 @@ public class City {
 
     @Override
     public String toString () { // overriding toString of object - to print text instead of hashcode.
-        return String.format("{%s, %d}", name, citizensNum);
+        return String.format("{%s, %d residents}", name, citizensNum);
     }
+
+
+
+
 }
