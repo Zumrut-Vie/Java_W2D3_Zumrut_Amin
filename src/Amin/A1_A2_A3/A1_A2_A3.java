@@ -1,8 +1,8 @@
-package Amin.A1_A2;
+package Amin.A1_A2_A3;
 import java.util.*;
 
 // Question: why we can't create ArrayList outside of main method in another class??
-public class A1_A2 {
+public class A1_A2_A3 {
 
     public static void main(String[] args) {
         List<String> cities = Arrays.asList( // keep the list of strings, then all can be added at once
@@ -97,7 +97,31 @@ public class A1_A2 {
         System.out.println("\nBefore adding first element: \n" + austrianCities);
         austrianCities.add(0, "NEW CITY"); // inplace method
         System.out.println("\nAfter adding first element: \n" + austrianCities);
+
+
+        // ==================================================================================
+
+        System.out.println("\n================================== A3 - Part 1 & 2" +
+                "=====================================");
+
+        String str = "Linz";
+        int indOfStr = austrianCities.indexOf(str);
+        System.out.println("\nBefore update: " + austrianCities);
+        austrianCities.set(indOfStr, "Villach"); // inplace method
+        System.out.println("\nAfter update: " + austrianCities);
+
+        // remove third element
+        austrianCities.remove(2); // inplace method - 'Innsbruck' removes.
+
+        System.out.println("\n================================== A3 - Part 3" +
+                "=====================================");
+
+        Collections.sort(austrianCities, Collections.reverseOrder()); // descending order
+        System.out.println("\nReverse order - descending: " + austrianCities);
+
     }
+
+
 
 
 
